@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f0f2f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:420px;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:5px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+input[type="radio"]{
+    width:auto;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007BFF;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+    text-align:center;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Registration Form</h2>
+
+<form id="registrationForm">
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" id="fullname">
+<small class="error" id="nameError"></small>
+</div>
+
+<div class="form-group">
+<label>Roll Number</label>
+<input type="text" id="roll">
+<small class="error" id="rollError"></small>
+</div>
+
+<div class="form-group">
+<label>Email ID</label>
+<input type="text" id="email">
+<small class="error" id="emailError"></small>
+</div>
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input type="text" id="mobile">
+<small class="error" id="mobileError"></small>
+</div>
+
+<div class="form-group">
+<label>Password</label>
+<input type="password" id="password">
+<small class="error" id="passwordError"></small>
+</div>
+
+<div class="form-group">
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword">
+<small class="error" id="confirmPasswordError"></small>
+</div>
+
+<div class="form-group">
+<label>Gender</label><br>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
+<br>
+<small class="error" id="genderError"></small>
+</div>
+
+<div class="form-group">
+<label>Department</label>
+<select id="department">
+<option value="">Select Department</option>
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>Mechanical</option>
+<option>Civil</option>
+</select>
+<small class="error" id="departmentError"></small>
+</div>
+
+<div class="form-group">
+<label>Date of Birth</label>
+<input type="date" id="dob">
+<small class="error" id="dobError"></small>
+</div>
+
+<button type="submit">Submit</button>
+
+<p class="success" id="successMessage"></p>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+// Clear previous messages
+document.querySelectorAll(".error").forEach(function(e){
+e.innerHTML="";
+});
+
+document.getElementById("successMessage").innerHTML="";
+
+let fullname=document.getElementById("fullname").value.trim();
+let roll=document.getElementById("roll").value.trim();
+let email=document.getElementById("email").value.trim();
+let mobile=document.getElementById("mobile").value.trim();
+let password=document.getElementById("password").value;
+let confirmPassword=document.getElementById("confirmPassword").value;
+let department=document.getElementById("department").value;
+let dob=document.getElementById("dob").value;
+let gender=document.querySelector('input[name="gender"]:checked');
+
+let valid=true;
+
+// Full Name Validation
+if(fullname==""){
+document.getElementById("nameError").innerHTML="Full Name cannot be empty";
+valid=false;
+}
+
+// Roll Number Validation
+if(!/^[A-Za-z0-9]+$/.test(roll)){
+document.getElementById("rollError").innerHTML="Roll Number must contain only letters and numbers";
+valid=false;
+}
+
+// Email Validation
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+document.getElementById("emailError").innerHTML="Enter a valid Email ID";
+valid=false;
+}
+
+// Mobile Validation
+if(!/^[0-9]{10}$/.test(mobile)){
+document.getElementById("mobileError").innerHTML="Mobile Number must contain exactly 10 digits";
+valid=false;
+}
+
+// Password Validation
+if(password.length<8){
+document.getElementById("passwordError").innerHTML="Password must be at least 8 characters";
+valid=false;
+}
+
+// Confirm Password Validation
+if(password!=confirmPassword){
+document.getElementById("confirmPasswordError").innerHTML="Passwords do not match";
+valid=false;
+}
+
+// Gender Validation
+if(gender==null){
+document.getElementById("genderError").innerHTML="Please select Gender";
+valid=false;
+}
+
+// Department Validation
+if(department==""){
+document.getElementById("departmentError").innerHTML="Please select Department";
+valid=false;
+}
+
+// Date of Birth Validation
+if(dob==""){
+document.getElementById("dobError").innerHTML="Please select Date of Birth";
+valid=false;
+}
+
+// Success Message
+if(valid){
+document.getElementById("successMessage").innerHTML="Registration Successful!";
+document.getElementById("registrationForm").reset();
+}
+
+});
+</script>
+
+</body>
+</html>
