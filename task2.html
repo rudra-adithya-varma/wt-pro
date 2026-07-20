@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #c9d0d4;
+            color: hsl(0, 30%, 4%);
+        }
+
+        table th, table td {
+                 color:rgb(14, 14, 15) !important;
+                 background-color: #4e5864 !important;
+                 border: 1px solid #670808 !important;
+        }
+
+        
+        button {
+            background-color: #1a1819 !important;
+            color: #ffffff !important;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        hr {
+            border: 2px solid #efe9e9;
+            
+
+        }
+
+        .navbar {
+            background-color: #4a5663 !important;
+            color: #ffffff !important;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit:  cover; 
+            border-radius: 10%;
+        }
+
+        .card {
+            background-color: #5b636d;
+            color: rgba(15, 10, 21, 0.418);
+            width: 100%;
+            border-radius: 50px;
+            border: 2px solid #4a0b0b;
+            box-shadow: #4a0b0b;
+            box-sizing: content-box;
+            align-items: left;
+            
+        }
+        footer {
+            background-color: #6b6e71;
+            color: rgb(18, 2, 2);
+            text-align: center; 
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">Student Profile</a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Student Profile Section -->
+    <main class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-5 col-md-7 col-sm-10">
+
+                <div class="card shadow text-center">
+
+                    <div class="card-body">
+    <hr class="mb-44">
+    <vr>
+                        <img src="image/WhatsApp Image 2026-07-13 at 9.03.02 PM.jpeg"
+                             alt="Student Photo"
+                             class="profile-img mb-3">
+
+                        <h3 class="card-title"><strong style="color: black;">RUDRA ADITHYA VARMA</strong></h3>
+
+                        <p><strong style="color: #0f0d0d;">Roll Number:A24126511055</strong></p>
+
+                        <p><strong style="color: #242121;">Branch:INFORMATION TECHNOLOG</strong></p>
+                        <p><strong style="color: #070404;">Year: 3rdYear</strong></p>
+                        
+                         
+
+                        <p id="contact">
+                            <strong style="color: #1e0303;">Email ID:DITHYA@gmail.com
+                        </p></strong>
+
+                        <button class="btn btn-primary">
+                            View Profile
+                        </button>
+    </vr>                    
+    <hr class="mb-4">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Academic Details -->
+        <section id="about" class="mt-5">
+        <hr class="mb-4">
+            <h2 class="text-center mb-4"><vr>Academic Details</vr> </h2>
+        <hr class="mb-4">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10 col-md-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-striped table-hover">
+
+                            <thead class="table-primary">
+
+                                <tr>
+                                    <th>Subject Name</th>
+                                    <th>Internal Marks</th>
+                                    <th>External Marks</th>
+                                    <th>Total Marks</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>Web Technology</strong></td>
+                                    <td>28</td>
+                                    <td>92</td>
+                                    <td>93</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Database Management</strong></td>
+                                    <td>27</td>
+                                    <td>92</td>
+                                    <td>95</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Management</strong></td>
+                                    <td>25</td>
+                                    <td>90</td>
+                                    <td>85</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Computer Networks</strong></td>
+                                    <td>26</td>
+                                    <td>92</td>
+                                    <td>88</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+    <hr class="mb-4">
+        <p class="mb-1"><strong>ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES</strong></p>
+    <hr class="mb-4">
+    <p class="mb-1"><strong>VISAKHAPATNAM</strong></p>
+     
+    <p <strong><b> Contact:</b></strong> +91 1234567890 | <strong>Email:</strong> student@example.com</p>
+    <p <strong><b> Code:</b></strong> 12345</p>
+    <hr class="mb-4">
+        <p class="mb-0">
+            &copy; 2026 Student Profile. All Rights Reserved.
+        </p>
+        <table class="table table-bordered table-striped table-hover text-primary"></table>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        
+    </script>
+
+</body>
+
+</html>
