@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    color:white;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+section{
+    padding:60px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Home */
+#home{
+    text-align:center;
+}
+
+#home img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+/* Skills */
+.skill{
+    margin:20px auto;
+    max-width:600px;
+}
+
+.progress{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    color:white;
+    padding:10px;
+    text-align:center;
+}
+
+.html{
+    width:90%;
+    background:#ff5722;
+}
+
+.css{
+    width:85%;
+    background:#2196F3;
+}
+
+.js{
+    width:80%;
+    background:#4CAF50;
+}
+
+/* Education */
+.card{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+/* Contact */
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#333;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#555;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+}
+
+/* Footer */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+<h2>My Portfolio</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Home -->
+<section id="home">
+
+<img src="image/WhatsApp Image 2026-07-20 at 1.48.42 PM.jpeg" alt="Profile">
+
+<h1>RUDRA ADITHYA VARMA</h1>
+
+<h3>Web Developer</h3>
+
+<p>Welcome to my personal portfolio website.</p>
+
+</section>
+
+<!-- About -->
+<section id="about">
+
+<h2>About Me</h2>
+
+<p style="text-align:center;">
+<h2>I am a passionate web developer skilled in HTML, CSS and JavaScript.
+I enjoy creating responsive and user-friendly websites.</h2></p>
+
+</section>
+
+<!-- Skills -->
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="progress">
+<div class="html">90%</div>
+</div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="progress">
+<div class="css">85%</div>
+</div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="progress">
+<div class="js">80%</div>
+</div>
+</div>
+
+</section>
+
+<!-- Education -->
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>B.Tech - INFORMATION TECHNOLOGY</h3>
+
+<p>Anits</p>
+
+<p>2024- 2028</p>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Responsive personal portfolio using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project">
+<h3>Calculator</h3>
+<p>Simple calculator application using JavaScript.</p>
+</div>
+
+<div class="project">
+<h3>Student Management System</h3>
+<p>Web application for managing student records.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<label>Name</label>
+<input type="text" id="name">
+<span class="error" id="nameError"></span>
+
+<label>Email</label>
+<input type="text" id="email">
+<span class="error" id="emailError"></span>
+
+<label>Subject</label>
+<input type="text" id="subject">
+<span class="error" id="subjectError"></span>
+
+<label>Message</label>
+<textarea id="message" rows="5"></textarea>
+<span class="error" id="messageError"></span>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+<p>Follow Me</p>
+
+<a href="#">GitHub</a>
+
+<a href="#">LinkedIn</a>
+
+<a href="#">Instagram</a>
+
+<p>© 2026 My Portfolio</p>
+
+</footer>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let valid=true;
+
+document.getElementById("nameError").innerHTML="";
+document.getElementById("emailError").innerHTML="";
+document.getElementById("subjectError").innerHTML="";
+document.getElementById("messageError").innerHTML="";
+
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+let subject=document.getElementById("subject").value.trim();
+let message=document.getElementById("message").value.trim();
+
+if(name===""){
+document.getElementById("nameError").innerHTML="Name cannot be empty";
+valid=false;
+}
+
+let emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email)){
+document.getElementById("emailError").innerHTML="Enter a valid email";
+valid=false;
+}
+
+if(subject.length<5){
+document.getElementById("subjectError").innerHTML="Subject must be at least 5 characters";
+valid=false;
+}
+
+if(message.length<20){
+document.getElementById("messageError").innerHTML="Message must be at least 20 characters";
+valid=false;
+}
+
+if(valid){
+alert("Message Sent Successfully");
+document.getElementById("contactForm").reset();
+}
+
+});
+
+</script>
+
+</body>
+</html>
